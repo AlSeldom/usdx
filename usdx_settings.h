@@ -14,15 +14,15 @@
 #define DIAG             1   // Hardware diagnostics on startup (only disable when your rig is working)
 #define KEYER            1   // CW keyer
 #define CAT              1   // CAT-interface
-#define F_XTAL    27000030   // 27MHz SI5351 crystal
+//#define F_XTAL    27000030   // 27MHz SI5351 crystal
 //#define F_XTAL  25004000   // 25MHz SI5351 crystal  (enable for WB2CBA-uSDX, SI5351 break-out board or uSDXDuO)
-//#define F_XTAL  25000000   // 25MHz SI5351 crystal  (enable for 25MHz TCXO)
+#define F_XTAL  25000000   // 25MHz SI5351 crystal  (enable for 25MHz TCXO)
 //#define SWAP_ROTARY    1   // Swap rotary direction (enable for WB2CBA-uSDX)
 //#define QCX            1   // Supports older (non-SDR) QCX HW modifications (QCX, QCX-SSB, QCX-DSP with I/Q alignment-feature)
 //#define OLED_SSD1306   1   // OLED display (SSD1306 128x32 or 128x64), connect SDA (PD2), SCL (PD3)
 //#define OLED_SH1106    1   // OLED display (SH1106 1.3" inch display), connect SDA (PD2), SCL (PD3), NOTE that this display is pretty slow
 //#define LCD_I2C        1   // LCD with I2C (PCF8574 module          ), connect SDA (PD2), SCL (PD3), NOTE that this display is pretty slow
-#define LPF_SWITCHING_DL2MAN_USDX_REV3           1   // Enable 8-band filter bank switching:     latching relays wired to a TCA/PCA9555 GPIO extender on the PC4/PC5 I2C bus; relays are using IO0.0 as common (ground), IO1.0..7 used by the individual latches K0-7 switching respectively LPFs for 10m, 15m, 17m, 20m, 30m, 40m, 60m, 80m
+//#define LPF_SWITCHING_DL2MAN_USDX_REV3           1   // Enable 8-band filter bank switching:     latching relays wired to a TCA/PCA9555 GPIO extender on the PC4/PC5 I2C bus; relays are using IO0.0 as common (ground), IO1.0..7 used by the individual latches K0-7 switching respectively LPFs for 10m, 15m, 17m, 20m, 30m, 40m, 60m, 80m
 //#define LPF_SWITCHING_DL2MAN_USDX_REV3_NOLATCH 1   // Enable 8-band filter bank switching: non-latching relays wired to a TCA/PCA9555 GPIO extender on the PC4/PC5 I2C bus; relays are using IO0.0 as common (ground), IO1.0..7 used by the individual latches K0-7 switching respectively LPFs for 10m, 15m, 17m, 20m, 30m, 40m, 60m, 80m. Enable this if you are using 8-band non-latching version for the relays, the radio will draw extra 15mA current but will work ity any relay (Tnx OH2UDS/TA7W Baris)
 //#define LPF_SWITCHING_DL2MAN_USDX_REV2         1   // Enable 5-band filter bank switching:     latching relays wired to a TCA/PCA9555 GPIO extender on the PC4/PC5 I2C bus; relays are using IO0.1 as common (ground), IO0.3, IO0.5, IO0.7, IO1.1, IO1.3 used by the individual latches K1-5 switching respectively LPFs for 20m, 30m, 40m, 60m, 80m
 //#define LPF_SWITCHING_DL2MAN_USDX_REV2_BETA    1   // Enable 5-band filter bank switching:     latching relays wired to a PCA9539PW   GPIO extender on the PC4/PC5 I2C bus; relays are using IO0.1 as common (ground), IO0.3, IO0.5, IO0.7, IO1.1, IO1.3 used by the individual latches K1-5 switching respectively LPFs for 20m, 30m, 40m, 60m, 80m
@@ -36,7 +36,7 @@
 //#define CONDENSED      1   // Display in 4 line mode (for OLED and LCD2004 modules)
 //#define CAT_EXT        1   // Extended CAT support: remote button and screen control commands over CAT
 //#define CAT_STREAMING  1   // Extended CAT support: audio streaming over CAT, once enabled and triggered with CAT cmd, samplerate 7812Hz, 8-bit unsigned audio is sent over UART. The ";" is omited in the data-stream, and only sent to indicate the beginning and end of a CAT cmd.
-#define CW_DECODER       1   // CW decoder
+//#define CW_DECODER       1   // CW decoder
 #define TX_ENABLE        1   // Disable this for RX only (no transmit), e.g. to support uSDX for kids idea: https://groups.io/g/ucx/topic/81030243#6276
 #define KEY_CLICK        1   // Reduce key clicks by envelope shaping
 #define SEMI_QSK         1   // Just after keying the transmitter, keeps the RX muted for a short amount of time in the anticipation for continued keying
@@ -58,17 +58,17 @@
 //#define CW_FREQS_QRP   1   // Defaults to CW QRP   frequencies when changing bands
 //#define CW_FREQS_FISTS 1   // Defaults to CW FISTS frequencies when changing bands
 
-#define CW_MESSAGE       1   // Transmits pre-defined CW messages on-demand (left-click menu item 4.2)
+//#define CW_MESSAGE       1   // Transmits pre-defined CW messages on-demand (left-click menu item 4.2)
 //#define CW_MESSAGE_EXT 1   // Additional CW messages
 
 //put your call and name here, it will be used to generate the predefined messages
-#define MYCALL "PE1NNN"
-#define MYNAME "GUIDO"
+#define MYCALL "RZ1AYA"
+#define MYNAME "ALEX"
 
 // predefined CW messages
 #define CW_MSG1 "CQ " MYCALL " +"
 // CW_MSG2-5 are used only when CW_MESSAGE_EXT is set
-#define CW_MSG2 "CQ CQ DE PE1NNN PE1NNN +"
+#define CW_MSG2 "CQ CQ DE RZ1AYA RZ1AYA +"
 #define CW_MSG3 "GE TKS 5NN 5NN NAME IS " MYNAME " " MYNAME " HW?"
 #define CW_MSG4 "FB RPTR TX 5W 5W ANT INV V 73 CUAGN"
 #define CW_MSG5 "73 TU E E"

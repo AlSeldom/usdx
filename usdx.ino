@@ -9,7 +9,7 @@
 
 /* NOTE: configure your radio in usdx_settings.h , not here */
 #include "usdx_settings.h"
-
+#include <Arduino.h>
 // QCX pin defintions
 #define LCD_D4  0         //PD0    (pin 2)
 #define LCD_D5  1         //PD1    (pin 3)
@@ -17,8 +17,8 @@
 #define LCD_D7  3         //PD3    (pin 5)
 #define LCD_EN  4         //PD4    (pin 6)
 #define FREQCNT 5         //PD5    (pin 11)
-#define ROT_A   6         //PD6    (pin 12)
-#define ROT_B   7         //PD7    (pin 13)
+#define ROT_B   6         //PD6    (pin 12)
+#define ROT_A   7         //PD7    (pin 13)
 #define RX      8         //PB0    (pin 14)
 #define SIDETONE 9        //PB1    (pin 15)
 #define KEY_OUT 10        //PB2    (pin 16)
